@@ -1,0 +1,12 @@
+spring:
+  redis:
+    sentinel:
+      master: mymaster
+      nodes: 172.21.114.123:26379,172.21.112.186:26379,172.21.115.114:26379
+    lettuce:
+      pool:
+        max-active: 200
+        max-wait: 20ms
+        min-idle: 10
+        time-between-eviction-runs: 100ms
+    timeout: 1000ms
